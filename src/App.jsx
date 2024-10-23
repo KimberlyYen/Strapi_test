@@ -10,7 +10,7 @@ function App() {
     <Router>
       <div className="App">
         {/* SiteHeader 可以是靜態標題，並不依賴 documentId */}
-        <SiteHeader /> 
+        {/* <SiteHeader />  */}
         <Routes>
           {/* 各自路徑根據需要加載對應組件 */}
           <Route path="/" element={<Homepage />} />
