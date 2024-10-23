@@ -3,7 +3,7 @@ import useFetch from '../hooks/useFetch'
 import { Link } from 'react-router-dom'
 
 export default function Homepage() {
-  const { loading, error, data } = useFetch('http://localhost:1337/api/reviews') // 呼叫所有評論的 API
+  const { loading, error, data } = useFetch('https://grounded-compassion-7a840a9fe7.strapiapp.com/api/reviews') // 呼叫所有評論的 API
 
   if (loading) return <p>Loading....</p>
   if (error || !data) {
@@ -14,7 +14,7 @@ export default function Homepage() {
   // 如果 data 存在並且 data.data 是陣列，才進行映射
   const reviews = data.data || []
 
-  console.log('Fetched Data:', data)
+  // console.log('Fetched Data:', data)
   // console.log('reviews', reviews[0]?.documentId)  // 顯示第一個文件的 documentId 以確保正確抓到資料
 
   return (
