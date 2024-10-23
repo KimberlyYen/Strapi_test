@@ -3,7 +3,7 @@ import useFetch from '../hooks/useFetch'
 import { Link } from 'react-router-dom'
 
 export default function Homepage() {
-  const { loading, error, data } = useFetch('http://localhost:1337/api/heroes') // 呼叫所有評論的 API
+  const { loading, error, data } = useFetch('https://grounded-compassion-7a840a9fe7.strapiapp.com/admin/heroes') // 呼叫所有評論的 API
 
   if (loading) return <p>Loading....</p>
   if (error || !data) {
